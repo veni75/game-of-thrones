@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+@font-face{
+    font-family: throne;
+    src: url('/got-project/fonts/Game\ of\ Thrones.ttf');
+}
+
 main {
     display: flex;
 
@@ -43,9 +48,9 @@ p {
 }
 
 h3 {
-    text-align: center;
-    
+    font-family: throne;
     font-variant: small-caps;
+    text-align: center;    
 }
 
 .house{

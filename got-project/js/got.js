@@ -33,7 +33,11 @@ async function request(url) {
             charImg.setAttribute('src', `../got-project/${char.portrait}`);
             let charName = document.createElement('p');
             const charDescription = () => {
+                if(char.picture){
                 bigImg.setAttribute('src', `../got-project/${char.picture}`);
+                }else{
+                    bigImg.setAttribute('src', '../got-project/assets/pictures/placeholder.jpg');
+                }
                 characterName.textContent = `${char.name}`;
                 houseImg.setAttribute('src', `../got-project/assets/houses/${char.house}.png`);
                 charDescriptionText.textContent = `${char.bio}`;
