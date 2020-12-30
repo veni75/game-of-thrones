@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+
+}
+
+.characters {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 80%;
+    background-image: url('got-project/assets/site/mapblue.jpg');
+}
+
+.characters>div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 1.3rem 1.8rem;
+    text-align: center;
+    width: 8rem;
+}
+
+.characters img {
+    width: 4rem;
+    margin: 0 auto;
+    
+}
+
+p {
+    display: inline;
+    margin-top: 0.5rem;
+}
+
+.description {
+    color: white;
+    flex: 20%;
+    background-color: rgb(58, 63, 63);
+    padding: 1rem;
+    position: relative;
+}
+
+h3 {
+    text-align: center;
+    
+    font-variant: small-caps;
+}
+
+.house{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.houseImg{
+    width: 3rem;
+}
+
+.iconButton {
+    border: 1px solid white;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    width: 25px;
+}
+
+input{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 15rem;
+}
