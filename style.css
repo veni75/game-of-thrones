@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-@font-face{
+@font-face {
     font-family: throne;
     src: url('/got-project/fonts/Game\ of\ Thrones.ttf');
 }
@@ -15,8 +15,14 @@ main {
 .characters {
     display: flex;
     flex-wrap: wrap;
-    flex: 80%;
+    flex: 65%;
     background-image: url('got-project/assets/site/mapblue.jpg');
+}
+
+@media screen and (min-width: 992px) {
+    .characters {
+        flex: 80%;
+    }
 }
 
 .characters>div {
@@ -31,7 +37,7 @@ main {
 .characters img {
     width: 4rem;
     margin: 0 auto;
-    
+
 }
 
 p {
@@ -39,43 +45,89 @@ p {
     margin-top: 0.5rem;
 }
 
+p:hover{
+    background-color: white;
+    font-variant: small-caps;
+    font-weight: 700;
+    color: red;
+    transition: 0.5s;
+}
+
+img:hover{
+    width: 5rem;
+    transition: width 0.5s;
+    animation-name: anim;    
+    animation-duration: 1s;
+}
+
+@keyframes anim {
+    0%   {opacity: 1;}    
+    100% {opacity: 0.6;}
+  }
+  
+  
+  
+
 .description {
     color: white;
-    flex: 20%;
+    flex: 35%;
     background-color: rgb(58, 63, 63);
     padding: 1rem;
     position: relative;
 }
 
+@media screen and (min-width: 992px) {
+    .description {
+        flex: 20%;
+    }
+}
+
 h3 {
     font-family: throne;
     font-variant: small-caps;
-    text-align: center;    
+    text-align: center;
 }
 
-.house{
+.house {
     display: flex;
     justify-content: space-between;
     margin: 1rem;
 }
 
-.houseImg{
+.houseImg {
     width: 3rem;
 }
 
 .iconButton {
-    border: 1px solid white;
-    border-radius: 5px;
-    display: inline-block;
+    background-color: rgb(58, 63, 63);
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    color: #ffffff;
+    height: 1.7rem;
     position: absolute;
     left: 15px;
     bottom: 15px;
     width: 25px;
 }
 
-input{
+.fa-search {
+    color: #292929;
+    position: absolute;
+    right: 25px;
+    bottom: 22px;
+}
+
+input {
+    border-radius: 3px;
+    height: 1.7rem;
     position: absolute;
     right: 15px;
     bottom: 15px;
-    width: 15rem;
+    width: 8rem;
+}
+
+@media screen and (min-width: 992px) {
+    input {
+        width: 13rem;
+    }
 }
