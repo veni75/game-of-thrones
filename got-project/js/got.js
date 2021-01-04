@@ -26,14 +26,16 @@ async function request(url) {
         });
         
         const searchName = () => {
-            const inputValue = input.value.toLowerCase();            
-            let char1 = 0;            
-            while (resultLive[char1].name.toLowerCase() !== inputValue ) {
+            const inputValue = input.value;                      
+            let char1 = 0;             
+            while (!resultLive[char1].name.toLowerCase().match(inputValue.toLowerCase())) {
                 char1 += 1;
                 if(!resultLive[char1]){
+                    bigImg.setAttribute('src', '');
+                    houseImg.setAttribute('src', '');
                     characterName.textContent = "Character not found";
                     charDescriptionText.textContent = '';
-                    return console.log("nincs");
+                    return;
                 }                
             }
             
@@ -54,7 +56,7 @@ async function request(url) {
             let charImg = document.createElement('img');
             charDiv.appendChild(charImg);
             charImg.setAttribute('src', `../got-project/${char.portrait}`);
-            let charName = document.createElement('p');
+            let charName = document.createElement('a');
             const charDescription = () => {
                 if (char.picture) {
                     bigImg.setAttribute('src', `../got-project/${char.picture}`);

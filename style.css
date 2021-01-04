@@ -40,33 +40,30 @@ main {
 
 }
 
-p {
-    display: inline;
+a {    
     margin-top: 0.5rem;
 }
 
-p:hover{
-    background-color: white;
+a:hover {
+    background-color: #ffffff;
     font-variant: small-caps;
     font-weight: 700;
-    color: red;
+    color: #ff0000;
     transition: 0.5s;
 }
 
-img:hover{
-    width: 5rem;
-    transition: width 0.5s;
-    animation-name: anim;    
-    animation-duration: 1s;
+a:active {
+    background-color: #ffffff;
+    font-variant: small-caps;
+    font-weight: 700;
+    color: #0d6801;    
 }
 
-@keyframes anim {
-    0%   {opacity: 1;}    
-    100% {opacity: 0.6;}
-  }
-  
-  
-  
+img:hover {
+    filter: contrast(150%);
+    transform: scale(1.5);
+    transition: all 0.5s ease-in-out;
+}
 
 .description {
     color: white;
